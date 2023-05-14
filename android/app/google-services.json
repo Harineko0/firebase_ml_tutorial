@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "275280252691",
+    "project_id": "fb-ml-tutoria",
+    "storage_bucket": "fb-ml-tutoria.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275280252691:android:7458bb4d355978a50e14e6",
+        "android_client_info": {
+          "package_name": "jp.mincra.firebase_ml_tutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "275280252691-4s6hs0pddmlf2p2kcv244mhl3qfae737.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUNDI2GcgiYcEsPJFNPIBUOXIh8je-uJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "275280252691-4s6hs0pddmlf2p2kcv244mhl3qfae737.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "275280252691-pg64ss2vo8h375vm5j5e4sv1ig2e6nu1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "jp.mincra.firebaseMlTutorial"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
