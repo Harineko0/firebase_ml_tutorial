@@ -21,7 +21,7 @@ class HomePageState extends ConsumerState<HomePage> {
   final TextRecognizer _textRecognizer = TextRecognizer(script: TextRecognitionScript.japanese);
   late CameraController _cameraController;
   late CameraDescription _camera;
-  bool scanNext = false;
+
   bool camReady = false;
 
   @override
@@ -60,8 +60,6 @@ class HomePageState extends ConsumerState<HomePage> {
       return;
     }
 
-    // _cameraController.startImageStream(_takePicture);
-
     setState(() {
       camReady = true;
     });
@@ -73,14 +71,6 @@ class HomePageState extends ConsumerState<HomePage> {
     }
 
     final xFile = await _cameraController.takePicture();
-
-    // final inputImage = convert(
-    //   camera: _camera,
-    //   cameraImage: availableImage,
-    // );
-    // final inputImage = InputImage.fromFilePath(xFile.path);
-    // // final recognizedText = await _textRecognizer.processImage(inputImage);
-    // // final text = recognizedText.text;
 
     final text = await annotateImage(File(xFile.path));
     ref.read(_annotatedTextProvider.notifier).setState(text);
