@@ -1,8 +1,12 @@
+import 'dart:io';
+
 import 'package:camera/camera.dart';
 import 'package:firebase_ml_tutorial/api/common_providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
+
+import 'api/functions.dart';
 
 final _annotatedTextProvider = StateNotifierProvider<StringNotifier, String>((ref) => StringNotifier(''));
 
@@ -74,12 +78,11 @@ class HomePageState extends ConsumerState<HomePage> {
     //   camera: _camera,
     //   cameraImage: availableImage,
     // );
-    final inputImage = InputImage.fromFilePath(xFile.path);
+    // final inputImage = InputImage.fromFilePath(xFile.path);
+    // // final recognizedText = await _textRecognizer.processImage(inputImage);
+    // // final text = recognizedText.text;
 
-    final recognizedText = await _textRecognizer.processImage(inputImage);
-    final text = recognizedText.text;
-
-    // final text = await annotateImage(File(xFile.path));
+    final text = await annotateImage(File(xFile.path));
     ref.read(_annotatedTextProvider.notifier).setState(text);
   }
 

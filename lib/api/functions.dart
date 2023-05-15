@@ -10,7 +10,7 @@ Future<String> annotateImage(File image) async {
   HttpsCallable callable = FirebaseFunctions.instance.httpsCallable('annotateImage');
   final params = '''{
           "image": {"content": "$base64Image"},
-          "features": [{"type": "LABEL_DETECTION", "maxResults": 1}],
+          "features": [{"type": "TEXT_DETECTION"}],
           "imageContext": {
             "languageHints": ["ja"]
           }
